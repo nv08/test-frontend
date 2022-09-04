@@ -23,7 +23,7 @@ jobs:
           with: 
             registry: ghcr.io
             username: ${{ github.actor }}
-            password: ${{ DOCKERHUB_TOKEN }}
+            password: ${{ secrets.DOCKERHUB_TOKEN }}
 
         - name: push image to ghcr
           run: |
