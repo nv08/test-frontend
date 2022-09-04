@@ -33,6 +33,7 @@ jobs:
             context: .
             push: true
             tags: ghcr.io/frontend
+            file: ./Dockerfile
 
         # - name: Build and push
         #   uses: docker/build-push-action@v2
