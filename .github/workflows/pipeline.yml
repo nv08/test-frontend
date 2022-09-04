@@ -31,8 +31,7 @@ jobs:
         - name: Build the Docker image
           run: |
             docker build . --tag ghcr.io/nv08/frontend
-            docker run ghcr.io/nv08/frontend:latest
-            docker push ghcr.io/nv08/frontend:latest
+            docker push ghcr.io/nv08/frontend
 
         # - name: Build and push
         #   uses: docker/build-push-action@v2
