@@ -31,7 +31,7 @@ jobs:
             registry: ghcr.io
             username: ${{ github.actor }}
             password: ${{ secrets.PAT }}
-            repository: frontend
+            repository: ghcr.io/frontend
             tags: latest
 
 
