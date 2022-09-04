@@ -17,7 +17,7 @@ jobs:
 
         - name: build image
           run: docker build . --file Dockerfile --tag ghcr.io/nv08/frontend:latest
-          
+
         - name: docker images
           run: docker images
 
@@ -38,7 +38,7 @@ jobs:
         #     tags: latest
 
         - name: push build
-          run: docker push ghcr.io/frontend:latest
+          run: docker push ghcr.io/frontend
 
         # - name: Set up QEMU
         #   uses: docker/setup-qemu-action@v2
