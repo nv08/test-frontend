@@ -27,8 +27,8 @@ jobs:
         
         - name: Build and push
           run: |
-            docker build . --tag ghcr.io/nv08/frontend/${{SHORT_SHA}}
-            docker push ghcr.io/nv08/frontend/${{SHORT_SHA}}
+            docker build . --tag ghcr.io/nv08/frontend:${{ SHORT_SHA }}
+            docker push ghcr.io/nv08/frontend:${{ SHORT_SHA }}
 
         # - name: Build and push
         #   uses: docker/build-push-action@v2
