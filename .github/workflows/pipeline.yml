@@ -11,11 +11,8 @@ jobs:
     name: "Build"
     runs-on: ubuntu-latest
     steps:
-        - name: Add SHORT_SHA env property with commit short sha
-          run: echo "SHORT_SHA=`echo ${GITHUB_SHA} | cut -c1-8`" >> $GITHUB_ENV
-          
-        - name: print short SHA
-          run: echo 'SHA=${ SHORT_SHA }'
+        - name: Construct short SHA
+          run: echo "SHORT_SHA=`echo ${GITHUB_SHA} | cut -c1-8`"
           
         - name: Checkout
           uses: actions/checkout@v2
@@ -30,8 +27,8 @@ jobs:
         
         - name: Build and push
           run: |
-            docker build . --tag ghcr.io/nv08/frontend
-            docker push ghcr.io/nv08/frontend
+            docker build . --tag ghcr.io/nv08/frontend/${SHORT_SHA}
+            docker push ghcr.io/nv08/frontend/${SHORT_SHA}
 
 
         # - name: Build and push
