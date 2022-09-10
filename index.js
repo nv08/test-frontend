@@ -8,7 +8,7 @@ const GOOGLE_CLIENT_SECRET = "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"
 
 app.get('/', async (req, res) => {
     let image = await axios('https://source.unsplash.com/random');
-    res.send(`<h1> hey yo ghcr!</h1>`)
+    res.send(`<h1> hey yo ghcr with perfect action file!</h1>`)
 })
 
 
