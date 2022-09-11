@@ -6,7 +6,7 @@ const app = express()
 
 
 app.get('/', async (req, res) => {
-    res.send('hello');
+    res.send(`<h1>hello world of kubernetes and ghcr yoooooooo!!!!!!!</h1>`);
 })
 
 app.listen((3000), () => {
