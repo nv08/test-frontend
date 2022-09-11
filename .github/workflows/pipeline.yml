@@ -1,11 +1,10 @@
-name: Build and publish the container image
+name: Build and publish
 
-"on":
+on:
   push:
-    tags:
-      - '*'
     branches:
-      - 'main'
+      - main
+  pull_request:
 
 jobs:
   build-and-push-image:
@@ -13,10 +12,7 @@ jobs:
     permissions:
       contents: read
       packages: write
-    steps:
-      - name: Set environment variables
-        run: echo "GIT_SHA=${GITHUB_SHA}"
-        
+    steps:      
       - name: Checkout repository
         uses: actions/checkout@v2
 
